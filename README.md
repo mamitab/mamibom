@@ -11,7 +11,7 @@
 git clone https://github.com/mamitab/mamibom.git
 cd mamibom
 pip3 install -r requirements.txt
-python3 enough.py
+python enough.py
 ```
 
 
