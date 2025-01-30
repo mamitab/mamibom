@@ -170,7 +170,9 @@ while 1:
         try:
             while True:
                 with ThreadPoolExecutor() as executor:
-                    futures = [
+                    futures =
+                        executor.submit(send_sms.Erdeğer),
+                        executor.submit(send_sms.Nissan),
                         executor.submit(send_sms.Akasya),
                         executor.submit(send_sms.Akbati),
                         executor.submit(send_sms.Ayyildiz),
