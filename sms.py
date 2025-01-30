@@ -34,7 +34,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> erdeger.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}başarılı! {self.phone} --> erdeger.com.tr")
 
     # elexushotel.com.tr
     def elexushotel(self):
@@ -71,7 +71,7 @@ class SendSms():
             else:
                 raise
         except:    
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> core.kahvedunyasi.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> core.kahvedunyasi.com")
         
      
     #wmf.com.tr
@@ -123,7 +123,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> englishhome.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> englishhome.com")
             
 
     #icq.net
@@ -138,7 +138,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> u.icq.net")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> u.icq.net")
           
 
     #suiste.com
@@ -154,7 +154,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> suiste.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> suiste.com")
                 
     
     #KimGbIster
@@ -167,7 +167,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> 3uptzlakwi.execute-api.eu-west-1.amazonaws.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> 3uptzlakwi.execute-api.eu-west-1.amazonaws.com")
             
 
     #tazi.tech
@@ -183,7 +183,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobileapiv2.tazi.tech")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> mobileapiv2.tazi.tech")
             
     
     #evidea.com
@@ -199,7 +199,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> evidea.com") 
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> evidea.com") 
 
 
     #heyscooter.com.tr
@@ -214,7 +214,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> heyapi.heymobility.tech")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> heyapi.heymobility.tech")
 
         
     #bisu.com.tr
