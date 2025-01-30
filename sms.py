@@ -94,7 +94,7 @@ class SendSms():
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> wmf.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarılı! {self.phone} --> wmf.com.tr")
     
     
     #bim
