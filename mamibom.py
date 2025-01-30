@@ -171,7 +171,6 @@ while 1:
             while True:
                 with ThreadPoolExecutor() as executor:
                     futures =
-                        executor.submit(send_sms.Erdeğer),
                         executor.submit(send_sms.Nissan),
                         executor.submit(send_sms.Akasya),
                         executor.submit(send_sms.Akbati),
@@ -222,7 +221,7 @@ while 1:
                         executor.submit(send_sms.Yapp),
                         executor.submit(send_sms.YilmazTicaret),
                         executor.submit(send_sms.Yuffi)
-                    ]
+                    
                     wait(futures)
         except KeyboardInterrupt:
             system("cls||clear")
