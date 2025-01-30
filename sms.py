@@ -37,9 +37,6 @@ class SendSms():
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> wmf.com.tr")
     
 
-
-      
-      
         
         #elexushotel.com.tr
         def elexushotel(self):
