@@ -170,7 +170,7 @@ while 1:
         try:
             while True:
                with ThreadPoolExecutor() as executor:
-    futures = [
+    futures =  
         executor.submit(send_sms.elexushotel),
         executor.submit(send_sms.Akbati),
         executor.submit(send_sms.Ayyildiz),
@@ -221,8 +221,8 @@ while 1:
         executor.submit(send_sms.YilmazTicaret),
         executor.submit(send_sms.Yuffi),
         executor.submit(send_sms.Akasya)
-    ]
-    wait(futures) 
+
+   wait(futures) 
         except KeyboardInterrupt:
             system("cls||clear")
             print("\nCtrl+C tuş kombinasyonu algılandı. Menüye dönülüyor..")
