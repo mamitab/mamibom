@@ -208,6 +208,7 @@ while 1:
             executor.submit(send_sms.Starbucks),
             executor.submit(send_sms.Suiste),
             executor.submit(send_sms.Taksim),
+            executor.submit(send_sms.subaro),
             executor.submit(send_sms.Tasdelen),
             executor.submit(send_sms.Tasimacim),
             executor.submit(send_sms.Tazi),
