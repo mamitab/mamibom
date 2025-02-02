@@ -1,6 +1,14 @@
 from concurrent.futures import ThreadPoolExecutor, wait
 import os
 import time
+from sms import SendSms  # Make sure to import the SendSms class
+
+# Example phone number and email
+phone_number = "5551234567"
+email = "example@gmail.com"
+
+# Create an instance of SendSms
+send_sms = SendSms(phone_number, email)
 
 try:
     with ThreadPoolExecutor() as executor:
