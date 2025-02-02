@@ -5,7 +5,7 @@ from colorama import Fore, Style
 
 class SendSms:
     adet = 0
-    
+
     def __init__(self, phone, mail):
         self.phone = str(phone)
         self.mail = mail if mail else ''.join(choice(ascii_lowercase) for i in range(20)) + "@gmail.com"
@@ -36,34 +36,57 @@ class SendSms:
         except:
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> Getir")
 
-    # Add similar methods for other services (Dsmart, Uber, Kimgbister, asiselektronik, Evidea, Dominos, Englishhome, File)
-    
-    def Dominos(self):
+    def Dsmart(self):
         try:
-            url = "https://frontend.dominos.com.tr:443/api/customer/sendOtpCode"
-            headers = {"Content-Type": "application/json;charset=utf-8", "Accept": "application/json, text/plain, */*"}
-            json = {"email": self.mail, "isSure": False, "mobilePhone": self.phone}
-            response = requests.post(url, headers=headers, json=json, timeout=6)
-            if response.json().get("isSuccess"):
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> Dominos")
-                self.adet += 1
-            else:
-                raise Exception
-        except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> Dominos")
-
-    def Englishhome(self):
-        try:
-            url = "https://www.englishhome.com.tr/api/sms/send"
-            json = {"phone": self.phone, "email": self.mail}
-            response = requests.post(url, json=json, timeout=6)
+            url = "https://www.dsmart.com.tr/api/sms/send"
+            data = {"phone": self.phone, "email": self.mail}
+            response = requests.post(url, data=data, timeout=6)
             if response.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> Englishhome")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> Dsmart")
                 self.adet += 1
             else:
                 raise Exception
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> Englishhome")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> Dsmart")
+
+    def Uber(self):
+        try:
+            url = "https://www.uber.com/api/sms/send"
+            data = {"phone": self.phone, "email": self.mail}
+            response = requests.post(url, data=data, timeout=6)
+            if response.status_code == 200:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> Uber")
+                self.adet += 1
+            else:
+                raise Exception
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> Uber")
+
+    def Kimgbister(self):
+        try:
+            url = "https://www.kimgbister.com/api/sms/send"
+            data = {"phone": self.phone, "email": self.mail}
+            response = requests.post(url, data=data, timeout=6)
+            if response.status_code == 200:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> Kimgbister")
+                self.adet += 1
+            else:
+                raise Exception
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> Kimgbister")
+
+    def asiselektronik(self):
+        try:
+            url = "https://www.asiselektronik.com/api/sms/send"
+            data = {"phone": self.phone, "email": self.mail}
+            response = requests.post(url, data=data, timeout=6)
+            if response.status_code == 200:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET ALL}Başarılı! {self.phone} --> asiselektronik")
+                self.adet += 1
+            else:
+                raise Exception
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET ALL}Başarısız! {self.phone} --> asiselektronik")
 
     def Evidea(self):
         try:
@@ -71,12 +94,39 @@ class SendSms:
             json = {"phone": self.phone, "email": self.mail}
             response = requests.post(url, json=json, timeout=6)
             if response.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> Evidea")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET ALL}Başarılı! {self.phone} --> Evidea")
                 self.adet += 1
             else:
                 raise Exception
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> Evidea")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET ALL}Başarısız! {self.phone} --> Evidea")
+
+    def Dominos(self):
+        try:
+            url = "https://frontend.dominos.com.tr:443/api/customer/sendOtpCode"
+            headers = {"Content-Type": "application/json;charset=utf-8", "Accept": "application/json, text/plain, */*"}
+            json = {"email": self.mail, "isSure": False, "mobilePhone": self.phone}
+            response = requests.post(url, headers=headers, json=json, timeout=6)
+            if response.json().get("isSuccess"):
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET ALL}Başarılı! {self.phone} --> Dominos")
+                self.adet += 1
+            else:
+                raise Exception
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET ALL}Başarısız! {self.phone} --> Dominos")
+
+    def Englishhome(self):
+        try:
+            url = "https://www.englishhome.com.tr/api/sms/send"
+            json = {"phone": self.phone, "email": self.mail}
+            response = requests.post(url, json=json, timeout=6)
+            if response.status_code == 200:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET ALL}Başarılı! {self.phone} --> Englishhome")
+                self.adet += 1
+            else:
+                raise Exception
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET ALL}Başarısız! {self.phone} --> Englishhome")
 
     def File(self):
         try:
@@ -84,12 +134,12 @@ class SendSms:
             json = {"phone": self.phone, "email": self.mail}
             response = requests.post(url, json=json, timeout=6)
             if response.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> File")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET ALL}Başarılı! {self.phone} --> File")
                 self.adet += 1
             else:
                 raise Exception
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> File")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET ALL}Başarısız! {self.phone} --> File")
 
 # Example of using the SendSms class
 if __name__ == "__main__":
@@ -98,7 +148,11 @@ if __name__ == "__main__":
     sms_sender = SendSms(phone, email)
     sms_sender.Trendyol()
     sms_sender.Getir()
+    sms_sender.Dsmart()
+    sms_sender.Uber()
+    sms_sender.Kimgbister()
+    sms_sender.asiselektronik()
+    sms_sender.Evidea()
     sms_sender.Dominos()
     sms_sender.Englishhome()
-    sms_sender.Evidea()
     sms_sender.File()
