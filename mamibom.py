@@ -62,4 +62,3 @@ except KeyboardInterrupt:
     os.system("cls||clear")
     print("\nCtrl+C tuş kombinasyonu algılandı. Menüye dönülüyor..")
     time.sleep(2)
-    
