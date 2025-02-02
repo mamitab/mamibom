@@ -1,3 +1,7 @@
+from concurrent.futures import ThreadPoolExecutor, wait
+import os
+import time
+
 try:
     with ThreadPoolExecutor() as executor:
         futures = [
@@ -55,6 +59,6 @@ try:
         ]
         wait(futures)
 except KeyboardInterrupt:
-    system("cls||clear")
+    os.system("cls||clear")
     print("\nCtrl+C tuş kombinasyonu algılandı. Menüye dönülüyor..")
-    sleep(2)
+    time.sleep(2)
