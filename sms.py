@@ -22,9 +22,9 @@ class SendSms():
                 "date_of_birth": "1956-03-01",
                 "email": self.mail,
                 "email_allowed": "true",
-                "first_name": "Memati",
+                "first_name": "anonymous",
                 "gender": "male",
-                "last_name": "Bas",
+                "last_name": "baş",
                 "password": "31ABC..abc31",
                 "phone": f"0{self.phone}"
             }, timeout=6)
